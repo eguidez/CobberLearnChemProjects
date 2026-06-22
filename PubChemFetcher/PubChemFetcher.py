@@ -3,7 +3,7 @@ import pubchempy as pcp
 # User needs to replace compound_name with the compound of interest.
 
 # Search PubChem for theobromine
-compound_name = 'theobromine'
+compound_name = 'cobberite'
 compounds = pcp.get_compounds(compound_name,'name')
 
 if compounds:
@@ -14,4 +14,4 @@ if compounds:
     print(f"Molecular Weight: {compound.molecular_weight}")
     print(f"Connectivity SMILES: {compound.connectivity_smiles}")
 else:
-    print("Theobromine not found in PubChem.")
+    print(f"{compound_name} not found in PubChem.")
