@@ -4,14 +4,21 @@ import pubchempy as pcp
 
 # Search PubChem for theobromine
 compound_name = 'cobberite'
-compounds = pcp.get_compounds(compound_name,'name')
 
-if compounds:
-    compound = compounds[0]
+# Search for multiple compound
+compound_list = ['caffeine','aspirin','nicotine']
+for compound_name in compound_list:
+    compounds = pcp.get_compounds(compound_name,'name')
 
-    print(f"Name: {compound_name}")
-    print(f"Molecular Formula: {compound.molecular_formula}")
-    print(f"Molecular Weight: {compound.molecular_weight}")
-    print(f"Connectivity SMILES: {compound.connectivity_smiles}")
-else:
-    print(f"{compound_name} not found in PubChem.")
+    if compounds:
+        compound = compounds[0]
+
+        print(f"Name: {compound_name}")
+        print(f"Molecular Formula: {compound.molecular_formula}")
+        print(f"Molecular Weight: {compound.molecular_weight}")
+        print(f"Connectivity SMILES: {compound.connectivity_smiles}")
+        print(f"Number of H-bonds donors: {compound.h_bond_donor_count}")
+        print(f"Number of H-bonds acceptors: {compound.h_bond_acceptor_count}")
+        print(f"XlogP values: {compound.xlogp}")
+    else:
+        print(f"{compound_name} not found in PubChem.")
