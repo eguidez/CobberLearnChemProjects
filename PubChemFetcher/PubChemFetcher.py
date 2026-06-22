@@ -1,6 +1,7 @@
 import pubchempy as pcp
 #This script searches for molecular weight, molecular formula and SMILES string for a compound.
 # User needs to replace compound_name with the compound of interest.
+
 # Search PubChem for theobromine
 compound_name = 'theobromine'
 compounds = pcp.get_compounds(compound_name,'name')
