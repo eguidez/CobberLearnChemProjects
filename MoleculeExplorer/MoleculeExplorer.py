@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 # Step 2: Combine PubChem Fetcher code to generate SMILES string from molecule name and then output properties with RDKit
 # Step 3 : Output properties in a Table like what was done with PubChem Fetcher
 # Step 4: Generate similarity matrix
+# step 5: Plot similarity matrix
 
 # Input SMILES string
 #smiles = "CCO"   # Ethanol
